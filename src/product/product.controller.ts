@@ -86,7 +86,7 @@ export class ProductController {
         if (!products) {
             products = await this.productService.find();
 
-            await this.cacheManager.set('products_backend', products, {ttl: 1800})
+            await this.cacheManager.set('products_backend', products, 1800 * 1e3)
         }
 
         if (request.query.s) {

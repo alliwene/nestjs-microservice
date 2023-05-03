@@ -10,7 +10,7 @@ services:
       - db
 
   db:
-    image: mysql:5.7.22
+    image: mysql
     restart: always
     environment:
       MYSQL_DATABASE: ambassador
